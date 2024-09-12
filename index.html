@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gimnasio - Inicio de sesión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="login-form">
+    <h1>Inicio de sesión</h1>
+    <label for="username">Nombre de usuario:</label>
+    <input type="text" id="username" placeholder="Ingresa tu nombre de usuario">
+    
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" placeholder="Ingresa tu contraseña">
+
+    <button id="login-btn">Iniciar sesión</button>
+    
+    <p id="error-message" style="display: none;">Usuario o contraseña incorrectos.</p>
+  </div>
+
+  <!-- Aquí irá el nombre del usuario autenticado (lo ocultamos inicialmente) -->
+<h2 id="nombreUsuarioActual" style="display: none;"></h2>
+
+<div id="gimnasio-app" style="display: none;">
+    <h1>Organizador de Turnos del Gimnasio</h1>
+  
+  <!-- Mostramos el nombre del usuario autenticado y deshabilitamos el selector -->
+    <label for="usuario">Alumno autenticado:</label>
+    <input type="text" id="usuarioAutenticado" disabled>
+
+
+    <label for="dia">Seleccionar Día:</label>
+    <select id="dia">
+      <option value="Lunes">Lunes</option>
+      <option value="Martes">Martes</option>
+      <option value="Miércoles">Miércoles</option>
+      <option value="Jueves">Jueves</option>
+      <option value="Viernes">Viernes</option>
+    </select>
+
+    <h2>Turnos disponibles para <span id="nombreAlumno">Juan</span> el <span id="nombreDia">Lunes</span></h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Estado</th>
+          <th>Acción</th>
+        </tr>
+      </thead>
+      <tbody id="turnos"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
